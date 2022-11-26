@@ -1,0 +1,23 @@
+[2022-11-26T20:39:25.529+0000] {taskinstance.py:1172} INFO - Dependencies all met for <TaskInstance: de_pipeline.read_gcs_bucket_files manual__2022-11-26T20:39:17.378624+00:00 [queued]>
+[2022-11-26T20:39:25.646+0000] {taskinstance.py:1172} INFO - Dependencies all met for <TaskInstance: de_pipeline.read_gcs_bucket_files manual__2022-11-26T20:39:17.378624+00:00 [queued]>
+[2022-11-26T20:39:25.652+0000] {taskinstance.py:1369} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-26T20:39:25.656+0000] {taskinstance.py:1370} INFO - Starting attempt 1 of 3
+[2022-11-26T20:39:25.662+0000] {taskinstance.py:1371} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-26T20:39:25.753+0000] {taskinstance.py:1390} INFO - Executing <Task(PythonOperator): read_gcs_bucket_files> on 2022-11-26 20:39:17.378624+00:00
+[2022-11-26T20:39:25.805+0000] {standard_task_runner.py:52} INFO - Started process 685 to run task
+[2022-11-26T20:39:25.949+0000] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'de_pipeline', 'read_gcs_bucket_files', 'manual__2022-11-26T20:39:17.378624+00:00', '--job-id', '36', '--raw', '--subdir', 'DAGS_FOLDER/d.e zoomcamp.py', '--cfg-path', '/tmp/tmp_wqtw4x0', '--error-file', '/tmp/tmpmaq6vu0s']
+[2022-11-26T20:39:26.010+0000] {standard_task_runner.py:80} INFO - Job 36: Subtask read_gcs_bucket_files
+[2022-11-26T20:39:27.869+0000] {task_command.py:375} INFO - Running <TaskInstance: de_pipeline.read_gcs_bucket_files manual__2022-11-26T20:39:17.378624+00:00 [running]> on host airflow-worker-7bd568f56c-cqtd4
+[2022-11-26T20:39:28.928+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Oladayo
+AIRFLOW_CTX_DAG_ID=de_pipeline
+AIRFLOW_CTX_TASK_ID=read_gcs_bucket_files
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-26T20:39:17.378624+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-26T20:39:17.378624+00:00
+[2022-11-26T20:39:46.128+0000] {python.py:173} INFO - Done. Returned value was: None
+[2022-11-26T20:39:46.171+0000] {taskinstance.py:1408} INFO - Marking task as SUCCESS. dag_id=de_pipeline, task_id=read_gcs_bucket_files, execution_date=20221126T203917, start_date=20221126T203925, end_date=20221126T203946
+[2022-11-26T20:39:46.403+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-26T20:39:46.506+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

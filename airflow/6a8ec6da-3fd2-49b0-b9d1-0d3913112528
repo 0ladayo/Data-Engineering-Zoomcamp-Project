@@ -1,0 +1,311 @@
+name: "operations/6a8ec6da-3fd2-49b0-b9d1-0d3913112528"
+done: true
+sequence_number: 5
+response: "Airflow services are ready now"
+environment_creation_metadata {
+  stage: CREATION_FINISHED
+  airflow_config {
+    config {
+      key: "api"
+      value {
+        entries {
+          key: "auth_backend"
+          value: "airflow.composer.api.backend.composer_auth,airflow.api.auth.backend.session"
+        }
+        entries {
+          key: "composer_auth_user_registration_role"
+          value: "Op"
+        }
+      }
+    }
+    config {
+      key: "celery"
+      value {
+        entries {
+          key: "broker_url"
+          value: "redis://airflow-redis-service.default.svc.cluster.local:6379/0"
+        }
+        entries {
+          key: "celery_app_name"
+          value: "airflow.executors.celery_executor"
+        }
+        entries {
+          key: "flower_port"
+          value: "5555"
+        }
+        entries {
+          key: "result_backend"
+          value: "redis://airflow-redis-service.default.svc.cluster.local:6379/0"
+        }
+        entries {
+          key: "ssl_active"
+          value: "False"
+        }
+        entries {
+          key: "worker_concurrency"
+          value: "6"
+        }
+        entries {
+          key: "worker_log_server_port"
+          value: "8793"
+        }
+      }
+    }
+    config {
+      key: "celery_broker_transport_options"
+      value {
+        entries {
+          key: "visibility_timeout"
+          value: "604800"
+        }
+      }
+    }
+    config {
+      key: "core"
+      value {
+        entries {
+          key: "dag_concurrency"
+          value: "15"
+        }
+        entries {
+          key: "dagbag_import_timeout"
+          value: "30"
+        }
+        entries {
+          key: "dags_are_paused_at_creation"
+          value: "False"
+        }
+        entries {
+          key: "dags_folder"
+          value: "/home/airflow/gcs/dags"
+        }
+        entries {
+          key: "default_task_retries"
+          value: "2"
+        }
+        entries {
+          key: "donot_pickle"
+          value: "True"
+        }
+        entries {
+          key: "enable_xcom_pickling"
+          value: "False"
+        }
+        entries {
+          key: "executor"
+          value: "CeleryExecutor"
+        }
+        entries {
+          key: "killed_task_cleanup_time"
+          value: "50"
+        }
+        entries {
+          key: "load_examples"
+          value: "False"
+        }
+        entries {
+          key: "max_active_runs_per_dag"
+          value: "15"
+        }
+        entries {
+          key: "min_serialized_dag_update_interval"
+          value: "30"
+        }
+        entries {
+          key: "parallelism"
+          value: "18"
+        }
+        entries {
+          key: "plugins_folder"
+          value: "/home/airflow/gcs/plugins"
+        }
+        entries {
+          key: "store_dag_code"
+          value: "True"
+        }
+        entries {
+          key: "store_serialized_dags"
+          value: "True"
+        }
+        entries {
+          key: "wait_dag_not_found_timeout"
+          value: "60"
+        }
+      }
+    }
+    config {
+      key: "database"
+      value {
+        entries {
+          key: "sql_alchemy_pool_recycle"
+          value: "570"
+        }
+      }
+    }
+    config {
+      key: "email"
+      value {
+        entries {
+          key: "email_backend"
+          value: "airflow.providers.sendgrid.utils.emailer.send_email"
+        }
+      }
+    }
+    config {
+      key: "kubernetes"
+      value {
+        entries {
+          key: "config_file"
+          value: "/home/airflow/composer_kube_config"
+        }
+        entries {
+          key: "in_cluster"
+          value: "False"
+        }
+        entries {
+          key: "namespace"
+          value: "composer-1-19-15-airflow-2-3-4-6a8ec6da"
+        }
+        entries {
+          key: "pod_template_file"
+          value: "${AIRFLOW_HOME}/composer_kubernetes_pod_template_file.yaml"
+        }
+      }
+    }
+    config {
+      key: "logging"
+      value {
+        entries {
+          key: "base_log_folder"
+          value: "/home/airflow/gcs/logs"
+        }
+        entries {
+          key: "remote_base_log_folder"
+          value: "gs://europe-west2-de-zoomcamp-6a8ec6da-bucket/logs"
+        }
+        entries {
+          key: "remote_log_conn_id"
+          value: "google_cloud_default"
+        }
+        entries {
+          key: "remote_logging"
+          value: "True"
+        }
+      }
+    }
+    config {
+      key: "metrics"
+      value {
+        entries {
+          key: "statsd_host"
+          value: "airflow-monitoring-service.default.svc.cluster.local"
+        }
+        entries {
+          key: "statsd_on"
+          value: "True"
+        }
+        entries {
+          key: "statsd_port"
+          value: "8126"
+        }
+        entries {
+          key: "statsd_prefix"
+          value: "airflow"
+        }
+      }
+    }
+    config {
+      key: "operators"
+      value {
+        entries {
+          key: "default_queue"
+          value: "default"
+        }
+      }
+    }
+    config {
+      key: "scheduler"
+      value {
+        entries {
+          key: "dag_dir_list_interval"
+          value: "30"
+        }
+        entries {
+          key: "num_runs"
+          value: "5000"
+        }
+      }
+    }
+    config {
+      key: "webserver"
+      value {
+        entries {
+          key: "async_dagbag_loader"
+          value: "False"
+        }
+        entries {
+          key: "cookie_samesite"
+          value: "Lax"
+        }
+        entries {
+          key: "enable_proxy_fix"
+          value: "True"
+        }
+        entries {
+          key: "expose_config"
+          value: "True"
+        }
+        entries {
+          key: "google_oauth2_audience"
+          value: "/projects/822873644021/apps/o9757bd38140456fbp-tp"
+        }
+        entries {
+          key: "rbac_user_registration_role"
+          value: "Op"
+        }
+        entries {
+          key: "reload_on_plugin_change"
+          value: "True"
+        }
+        entries {
+          key: "secret_key"
+          value: "temporary_key"
+        }
+        entries {
+          key: "update_fab_perms"
+          value: "False"
+        }
+        entries {
+          key: "web_server_host"
+          value: "0.0.0.0"
+        }
+        entries {
+          key: "web_server_name"
+          value: "de-zoomcamp"
+        }
+        entries {
+          key: "web_server_port"
+          value: "8080"
+        }
+        entries {
+          key: "web_server_worker_timeout"
+          value: "60"
+        }
+        entries {
+          key: "worker_class"
+          value: "sync"
+        }
+        entries {
+          key: "worker_refresh_interval"
+          value: "600"
+        }
+        entries {
+          key: "workers"
+          value: "2"
+        }
+      }
+    }
+  }
+  unblock_gae_creation: false
+  description: "Deployment succeeded!"
+}

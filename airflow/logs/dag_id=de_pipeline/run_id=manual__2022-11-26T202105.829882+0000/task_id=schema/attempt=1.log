@@ -1,0 +1,23 @@
+[2022-11-26T20:39:49.513+0000] {taskinstance.py:1172} INFO - Dependencies all met for <TaskInstance: de_pipeline.schema manual__2022-11-26T20:39:17.378624+00:00 [queued]>
+[2022-11-26T20:39:49.529+0000] {taskinstance.py:1172} INFO - Dependencies all met for <TaskInstance: de_pipeline.schema manual__2022-11-26T20:39:17.378624+00:00 [queued]>
+[2022-11-26T20:39:49.530+0000] {taskinstance.py:1369} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-26T20:39:49.531+0000] {taskinstance.py:1370} INFO - Starting attempt 1 of 3
+[2022-11-26T20:39:49.531+0000] {taskinstance.py:1371} INFO - 
+--------------------------------------------------------------------------------
+[2022-11-26T20:39:49.553+0000] {taskinstance.py:1390} INFO - Executing <Task(PythonOperator): schema> on 2022-11-26 20:39:17.378624+00:00
+[2022-11-26T20:39:49.560+0000] {standard_task_runner.py:52} INFO - Started process 717 to run task
+[2022-11-26T20:39:49.569+0000] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'de_pipeline', 'schema', 'manual__2022-11-26T20:39:17.378624+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/d.e zoomcamp.py', '--cfg-path', '/tmp/tmpts5rg7kv', '--error-file', '/tmp/tmp6lnhibpy']
+[2022-11-26T20:39:49.574+0000] {standard_task_runner.py:80} INFO - Job 37: Subtask schema
+[2022-11-26T20:39:50.287+0000] {task_command.py:375} INFO - Running <TaskInstance: de_pipeline.schema manual__2022-11-26T20:39:17.378624+00:00 [running]> on host airflow-worker-7bd568f56c-8qjk5
+[2022-11-26T20:39:50.474+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Oladayo
+AIRFLOW_CTX_DAG_ID=de_pipeline
+AIRFLOW_CTX_TASK_ID=schema
+AIRFLOW_CTX_EXECUTION_DATE=2022-11-26T20:39:17.378624+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-11-26T20:39:17.378624+00:00
+[2022-11-26T20:39:50.476+0000] {python.py:173} INFO - Done. Returned value was: {'trip': [{'name': 'id', 'type': 'INTEGER'}, {'name': 'duration', 'type': 'INTEGER'}, {'name': 'start_date', 'type': 'STRING'}, {'name': 'start_station_name', 'type': 'STRING'}, {'name': 'start_station_id', 'type': 'INTEGER'}, {'name': 'end_date', 'type': 'STRING'}, {'name': 'end_station_name', 'type': 'STRING'}, {'name': 'end_station_id', 'type': 'INTEGER'}, {'name': 'bike_id', 'type': 'INTEGER'}, {'name': 'subscription_type', 'type': 'STRING'}, {'name': 'zip_code', 'type': 'STRING'}], 'station': [{'name': 'id', 'type': 'INTEGER'}, {'name': 'name', 'type': 'STRING'}, {'name': 'lat', 'type': 'FLOAT'}, {'name': 'long', 'type': 'FLOAT'}, {'name': 'dock_count', 'type': 'INTEGER'}, {'name': 'city', 'type': 'STRING'}, {'name': 'installation_date', 'type': 'STRING'}], 'weather': [{'name': 'date', 'type': 'STRING'}, {'name': 'max_temperature_f', 'type': 'FLOAT'}, {'name': 'mean_temperature_f', 'type': 'FLOAT'}, {'name': 'min_temperature_f', 'type': 'FLOAT'}, {'name': 'max_dew_point_f', 'type': 'FLOAT'}, {'name': 'mean_dew_point_f', 'type': 'FLOAT'}, {'name': 'min_dew_point_f', 'type': 'FLOAT'}, {'name': 'max_humidity', 'type': 'FLOAT'}, {'name': 'mean_humidity', 'type': 'FLOAT'}, {'name': 'min_humidity', 'type': 'FLOAT'}, {'name': 'max_sea_level_pressure_inches', 'type': 'FLOAT'}, {'name': 'mean_sea_level_pressure_inches', 'type': 'FLOAT'}, {'name': 'min_sea_level_pressure_inches', 'type': 'FLOAT'}, {'name': 'max_visibility_miles', 'type': 'FLOAT'}, {'name': 'mean_visibility_miles', 'type': 'FLOAT'}, {'name': 'min_visibility_miles', 'type': 'FLOAT'}, {'name': 'max_wind_Speed_mph', 'type': 'FLOAT'}, {'name': 'mean_wind_speed_mph', 'type': 'FLOAT'}, {'name': 'max_gust_speed_mph', 'type': 'FLOAT'}, {'name': 'precipitation_inches', 'type': 'STRING'}, {'name': 'cloud_cover', 'type': 'FLOAT'}, {'name': 'events', 'type': 'STRING'}, {'name': 'wind_dir_degrees', 'type': 'FLOAT'}, {'name': 'zip_code', 'type': 'INTEGER'}]}
+[2022-11-26T20:39:50.555+0000] {taskinstance.py:1408} INFO - Marking task as SUCCESS. dag_id=de_pipeline, task_id=schema, execution_date=20221126T203917, start_date=20221126T203949, end_date=20221126T203950
+[2022-11-26T20:39:50.745+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-11-26T20:39:50.845+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
