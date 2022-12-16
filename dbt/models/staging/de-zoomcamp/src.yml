@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: de-zoomcamp-project
+    database: dummy-production-overview
+    schema: de_dataset
+    tables:
+      - name: trip
+        description: San Francisco trip data
+        columns:
+          - name: id
+            description: primary key for trip
+            tests:
+              - unique
+              - not_null
+      - name: station
+        description: San Francisco station data
+        columns:
+          - name: id
+            description: primary key for customers
+            tests:
+              - unique
+              - not_null
+      - name: weather
+        description: San Francisco weather data

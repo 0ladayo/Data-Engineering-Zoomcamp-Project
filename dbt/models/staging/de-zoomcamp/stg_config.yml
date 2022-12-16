@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_trip
+    columns:
+      - name: trip_id
+        description: primary key for stg_trip
+        tests:
+          - unique
+          - not_null
+      - name: subscription_type
+        tests:
+          - accepted_values:
+              values: ['Subscriber', 'Customer']
+  - name: stg_station
+    columns:
+      - name: station_id
+        description: primary key for stg_station
+        tests:
+          - unique
+          - not_null
+      - name: city
+        tests:
+          - accepted_values:
+              values: ['San Jose', 'Redwood City', 'Palo Alto', 'Mountain View', 'San Francisco']
+  - name: stg_weather
+    columns:
+      - name: weather_date
+        tests:
+          - not_null
