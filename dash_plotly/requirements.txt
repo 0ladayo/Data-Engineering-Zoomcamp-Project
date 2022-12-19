@@ -1,0 +1,9 @@
+dash==2.7.1
+
+dash-bootstrap-components==1.2.1
+
+pandas-gbq==0.18.1
+
+google-cloud-bigquery==3.4.1
+
+pandas==1.5.2
