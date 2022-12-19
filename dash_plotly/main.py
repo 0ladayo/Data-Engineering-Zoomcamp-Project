@@ -4,7 +4,9 @@ from dash import html
 
 import dash_bootstrap_components as dbc
 
-app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
+_app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
+
+app = _app.server
 
 sidebar = html.Div(
     [
@@ -40,7 +42,7 @@ sidebar = html.Div(
     className="sidebar",
 )
 
-app.layout = dbc.Container(
+_app.layout = dbc.Container(
 
     [sidebar, dash.page_container],
 
@@ -48,4 +50,4 @@ app.layout = dbc.Container(
 )
 
 if __name__ == "__main__":
-    app.run_server(port = 8022, debug=True)
+    _app.run_server(port = 8022, debug=True)
