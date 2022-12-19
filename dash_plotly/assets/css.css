@@ -1,0 +1,45 @@
+body {
+
+    background-color: rgb(11, 11, 12);
+    
+    margin-top: 50px;
+
+    margin-bottom: 50px;
+
+    margin-left: 300px;
+
+    margin-right: 50px;
+    
+    }
+
+.Select-control {
+    background-color: rgb(11, 11, 12) !important;
+    color:white;
+}  
+
+.Select-value-label {
+    color: white !important;
+}
+
+.Select-menu-outer {
+    background-color: rgb(11, 11, 12);
+    color: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16rem;
+  padding: 2rem 1rem;
+  background-color: rgb(52,51,50);
+ 
+}
+
+.content {
+  margin-left: 10rem;
+  margin-right: 2rem;
+  padding: 2rem 1rem;
+}
+    
