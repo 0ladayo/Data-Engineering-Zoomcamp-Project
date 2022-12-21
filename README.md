@@ -36,11 +36,13 @@
 
 > The web app was deployed to Google App Engine
 
-[Data Engineering Zoomcamp Project Web App (Dashboard)](https://dummy-production-overview.nw.r.appspot.com/)
-
 ### Output
 
 > the output can be viewed via the link below. It’s best viewed on a large screen for now. Trying to work around it so it can be flexible on different screen sizes.
+
+[Data Engineering Zoomcamp Project Web App (Dashboard)](https://dummy-production-overview.nw.r.appspot.com/)
+
+![](https://github.com/0ladayo/Data-Engineering-Zoomcamp-Project/blob/master/web%20app.jpg)
 
 ### Blog
 
