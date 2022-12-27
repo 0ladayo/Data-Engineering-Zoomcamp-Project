@@ -10,7 +10,7 @@ import plotly.express as px
 # In[22]:
 
 
-api_token = 'pk.eyJ1IjoiMGxhZGF5byIsImEiOiJja3o4bXRlc2cweDE1MnVtdWJuZjBkMW1rIn0.Ulh37a4zmejYBzZ5Pfm8iw'
+api_token = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
 
 # In[23]:
